@@ -1075,7 +1075,6 @@ function viewHome(){
  '<p class="lead">Planeje sua saída com segurança, descubra a acessibilidade do lugar antes de ir.</p>'+
  '<form class="search" id="home-form" role="search"><div class="field"><label for="hq">O que você procura?</label><input id="hq" type="search" placeholder="Restaurante, cafeteria, cinema..." autocomplete="off" value="'+esc(S.q)+'"></div>'+
  '<div class="field"><label for="hw">Onde?</label><input id="hw" value="Ribeirão Preto, SP" readonly aria-describedby="hw-n"></div><button type="submit" class="btn primary big">Buscar</button></form>'+
- '<p id="hw-n" class="muted" style="font-size:.85rem;margin-top:-8px">Por enquanto o Bora Lá cobre apenas Ribeirão Preto.</p>'+
  '<div class="row" role="group" aria-label="Sugestões de busca">'+['Restaurante','Cafeteria','Cinema','Parque','Shopping'].map(function(t){return '<button type="button" class="chip sm" data-act="chip-search" data-q="'+t+'">'+t+'</button>'}).join('')+'</div>'+
  '<p class="need-h" id="need-h">O que você precisa?</p><div class="row needs" role="group" aria-labelledby="need-h">'+SHORTCUTS.map(function(s){var on=s.keys.every(function(k){return S.filters.indexOf(k)>=0});return '<button type="button" class="chip" data-act="shortcut" data-id="'+s.id+'" aria-pressed="'+on+'">'+ico(s.i,18)+s.l+'</button>'}).join('')+'</div>'+
  '<div class="row"><button type="button" class="btn" data-act="prefs">'+ico('sliders',18)+'Personalizar minha busca</button><button type="button" class="btn ghost" data-act="demo">Ver demonstração guiada'+ico('arrow',18)+'</button></div></div>'+
